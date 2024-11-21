@@ -13,9 +13,13 @@ class AlbumController extends Controller
             return view("albums", ["albums" => $albums]);
         }
 
-        function album($id){
+    function album($id){
             $photos = DB::select("SELECT * FROM photos WHERE album_id = ?", [$id]);
             return view("album", ["photos" => $photos]);
         }
+
+    // function AlbumEdit(){
+    //     $create = DB::insert("SELECT * FROM");
+    // }
     
 }
