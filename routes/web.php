@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AlbumController;
+use App\Http\Controllers\PhotoController;
 use App\Http\Controllers\OriginalController;
 
 
@@ -21,3 +23,12 @@ Route::get('/', function () {
 });
 
 Route::get("/accueil", [OriginalController::class, 'accueil']);
+
+Route::get("/accueil/albums", [AlbumController::class, 'albums']);
+Route::get("/accueil/albums/{id}", [AlbumController::class, 'album']);
+Route::post("/accueil/albums/edit", [AlbumController::class, 'album_edit']);
+
+
+Route::get("/tags/{tag}", [PhotoController::class, 'tag']);
+Route::get("/recherche", [PhotoController::class, 'recherche']);
+Route::post("/photo/edit", [PhotoController::class, 'photo_edit']);
