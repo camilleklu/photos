@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Album</title>
-    <link href="./public/css/style.css" rel="stylesheet">
+    <link href="./public/css/header.css" rel="stylesheet">
     <link href="" rel="stylesheet">
     <link href="" rel="stylesheet">
 </head>
@@ -20,7 +20,7 @@
                 <a href="#connexion">Connexion</a>
             </div>
             <div class="nav-droite">
-                <input placeholder="Search" type="search" class="input"><i class='bx bx-search'></i>
+                <input placeholder="Rechercher" type="search" class="input"><i class='bx bx-search'></i>
             </div>
         </nav>
     </header>
