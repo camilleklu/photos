@@ -15,9 +15,21 @@
     <header>
         <nav class="header">
             <div class="nav-gauche">
-                <a href="#accueil">Accueil</a>
-                <a href="#albums">Albums</a>
-                <a href="#connexion">Connexion</a>
+                <a href="/accueil">Accueil</a>
+                <a href="/accueil/albums">Albums</a>
+                <!-- <a href="#connexion">Connexion</a> -->
+
+                @auth
+        Bonjour {{Auth::user()->name}}
+        <a href="{{route("logout")}}"
+           onclick="document.getElementById('logout').submit(); return false;">Logout</a>
+        <form id="logout" action="{{route("logout")}}" method="post">
+            @csrf
+        </form>
+    @else
+        <a href="{{route("login")}}">Login</a>
+        <a href="{{route("register")}}">Register</a>
+    @endauth
             </div>
             <div class="nav-droite">
                 <input placeholder="Rechercher" type="search" class="input"><i class='bx bx-search'></i>
@@ -36,3 +48,21 @@
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Rajoute ça dans le header pour le login et mot de passe -->
+
+
