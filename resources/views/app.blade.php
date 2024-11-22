@@ -36,3 +36,32 @@
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Rajoute ça dans le header pour le login et mot de passe -->
+
+
+<!-- @auth
+        Bonjour {{Auth::user()->name}}
+        <a href="{{route("logout")}}"
+           onclick="document.getElementById('logout').submit(); return false;">Logout</a>
+        <form id="logout" action="{{route("logout")}}" method="post">
+            @csrf
+        </form>
+    @else
+        <a href="{{route("login")}}">Login</a>
+        <a href="{{route("register")}}">Register</a>
+    @endauth -->
