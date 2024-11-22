@@ -15,9 +15,9 @@
     <header>
         <nav class="header">
             <div class="nav-gauche">
-                <a href="#accueil">Accueil</a>
-                <a href="#albums">Albums</a>
-                <a href="#connexion">Connexion</a>
+                <a href="/accueil">Accueil</a>
+                <a href="/accueil/albums">Albums</a>
+                <!-- <a href="#connexion">Connexion</a> -->
             </div>
             <div class="nav-droite">
                 <input placeholder="Search" type="search" class="input"><i class='bx bx-search'></i>
