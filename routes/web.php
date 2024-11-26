@@ -24,7 +24,7 @@ Route::get('/', function () {
 
 Route::get("/accueil", [OriginalController::class, 'accueil']);
 
-Route::get("/accueil/albums", [AlbumController::class, 'albums']);
+Route::get("/accueil/albums", [AlbumController::class, 'albums'])->name('albums');
 Route::get("/accueil/albums/{id}", [AlbumController::class, 'album']);
 Route::post("/accueil/albums/edit", [AlbumController::class, 'AlbumEdit']);
 

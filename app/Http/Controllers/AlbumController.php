@@ -18,8 +18,16 @@ class AlbumController extends Controller
             return view("album", ["photos" => $photos]);
         }
 
-    // function AlbumEdit(){
-    //     $create = DB::insert("SELECT * FROM");
-    // }
+    function AlbumEdit(Request $request){
+        $titre = $request->input('titre');
+
+        DB::insert("INSERT INTO albums (titre, creation, user_id) VALUES (?, ?, ?)", [
+            $titre, 
+            now(),     
+            1          
+        ]);
+    return redirect()->route('albums');  
+    }
+    
     
 }
