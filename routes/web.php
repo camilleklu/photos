@@ -19,7 +19,7 @@ use App\Http\Controllers\OriginalController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('/accueil');
 });
 
 Route::get("/accueil", [OriginalController::class, 'accueil']);
