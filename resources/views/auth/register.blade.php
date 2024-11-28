@@ -1,8 +1,8 @@
-@extends("app")
+@extends("layouts.app")
 
 @section("content")
 
-<form action="{{route("register")}}" method="post">
+<form action="{{route("register.store")}}" method="post">
     @csrf
     <input type="text" name="name" required placeholder="Name" /><br />
     <input type="email" name="email" required placeholder="Email" /><br />

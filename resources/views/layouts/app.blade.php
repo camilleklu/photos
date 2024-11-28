@@ -12,7 +12,10 @@
 
     <header>
 
+    
+
     <div id="desktopNav" class="desktop-nav">
+
                 <a href="/accueil">Accueil</a>
                 <a href="/accueil/albums">Albums</a>
                 @auth
@@ -43,6 +46,7 @@
                 @else
                 <a href="{{route("login")}}">Connexion</a>
                 <a href="{{route("register")}}">S'inscrire</a>
+
                 @endauth     
                 <input placeholder="Rechercher" type="search" name="search" class="input"><i class='bx bx-search'></i>
 </div>
