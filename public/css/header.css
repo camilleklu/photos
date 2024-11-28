@@ -7,7 +7,8 @@ body{
 header{
     box-shadow: rgba(0, 0, 0, 0.45) 0px 5px 20px 5px;
     width: 100%;
-    background-color: lightblue;
+    background-color: #4d2d33;
+    text-decoration: none;
   }
   
   .sidenav {
@@ -20,7 +21,8 @@ header{
       overflow-x: hidden; 
       padding-top: 60px; 
       transition: 0.5s; 
-      background-color: aquamarine;
+      background-color: #4d2d33;
+      color: aliceblue;
     }
   
     .sidenav a {
@@ -48,7 +50,7 @@ header{
     .desktop-nav {
       display: none; 
       width: 100%;
-      background-color: lightblue;
+      background-color: #4d2d33;
       text-align: center;
       padding-top: 0.5rem ;
       padding-bottom: 0.5rem;
@@ -70,6 +72,7 @@ header{
   @media (min-width: 870px) {
       header{
         box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+        color: aliceblue;
       }
       .sidenav {
         display: none;
