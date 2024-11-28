@@ -1,104 +1,124 @@
+/***** Polices d'écritures *****/
+@font-face {
+  font-family: "Huova";
+  src: url("../font/HuovaDemo-Light.otf");
+}
+
+@font-face {
+  font-family: "CloudScript";
+  src: url("../font/CloudScript-Regular 400.otf");
+}
+/***** Style global *****/
 body{
-    width: 100%;
-    margin: 0;
+  width: 100%;
+  margin: 0;
+}
+
+.app{
+  width: 100%;
+  min-height: 100vh;
+}
+
+/***** Header *****/
+header{
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 5px 20px 5px;
+  width: 100%;
+  background-color: #4d2d33;
+  text-decoration: none;
+  padding: 5px;
+}
+
+/***** Sidenav *****/
+.sidenav {
+  font-family: Huova;
+  height: 100%; 
+  width: 0; 
+  position: fixed; 
+  z-index: 1; 
+  top: 0; 
+  left: 0;
+  overflow-x: hidden; 
+  padding-top: 60px; 
+  transition: 0.5s; 
+  background-color: #4d2d33;
+  color: aliceblue;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 20px;
+  display: block;
+  transition: 0.3s;
+  font-family: CoreBandi;
+}
+
+.sidenav a, 
+.desktop-nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 20px;
+  margin-left: 50px;
+}
+  
+/***** Icônes*****/
+.bx-menu{
+  font-size: 45px;
+}
+
+/***** Desktop *****/
+.desktop-nav {
+  display: none; 
+  width: 100%;
+  background-color: #4d2d33;
+  text-align: center;
+  padding-top: 0.5rem ;
+  padding-bottom: 0.5rem;
+}
+
+/***** Footer *****/
+footer{
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px -25px 20px -20px;
+  padding: 1rem;
+  color: #111;
+  font-size: 25px;
+  font-family: CoreBandi;
 }
 
 
-header{
-    box-shadow: rgba(0, 0, 0, 0.45) 0px 5px 20px 5px;
-    width: 100%;
-    background-color: #4d2d33;
-    text-decoration: none;
+/***** Mobile *****/
+@media (min-width: 870px) {
+  header {
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    color: aliceblue;
   }
-  
+
   .sidenav {
-      height: 100%; 
-      width: 0; 
-      position: fixed; 
-      z-index: 1; 
-      top: 0; 
-      left: 0;
-      overflow-x: hidden; 
-      padding-top: 60px; 
-      transition: 0.5s; 
-      background-color: #4d2d33;
-      color: aliceblue;
-    }
-  
-    .sidenav a {
-      padding: 8px 8px 8px 32px;
-      text-decoration: none;
-      font-size: 25px;
-      display: block;
-      transition: 0.3s;
-      font-family: CoreBandi;
-    }
-    .bx-menu{
-    font-size: 45px;
-    }
-    .sidenav .closebtn {
-      position: absolute;
-      top: 0;
-      right: 25px;
-      font-size: 36px;
-      margin-left: 50px;
-    }
+    display: none;
+  }
 
+  .desktop-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
+  span[onclick="openNav()"] {
+    display: none;
+  }
 
-
-    .desktop-nav {
-      display: none; 
-      width: 100%;
-      background-color: #4d2d33;
-      text-align: center;
-      padding-top: 0.5rem ;
-      padding-bottom: 0.5rem;
-    }
-
-
-
-    footer{
-      text-align: center;
-      box-shadow: rgba(0, 0, 0, 0.45) 0px -25px 20px -20px;
-      padding: 1rem;
-      color: #111;
-      font-size: 25px;
-      font-family: CoreBandi;
-    }
-
-
-
-  @media (min-width: 870px) {
-      header{
-        box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
-        color: aliceblue;
-      }
-      .sidenav {
-        display: none;
-      }
-  
-      .desktop-nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 75%;
-        margin-left: auto;
-        margin-right: auto;
-      }
-     
-      span[onclick="openNav()"] {
-        display: none;
-      }
-  
-      footer{
-        box-shadow: rgba(0, 0, 0, 0.45) 0px -25px 20px -20px;
-      }
-    }
-
-
-
-    .app{
-        width: 100%;
-        min-height: 100vh;
-    }
+  footer {
+    box-shadow: rgba(0, 0, 0, 0.45) 0px -25px 20px -20px;
+  }
+}
