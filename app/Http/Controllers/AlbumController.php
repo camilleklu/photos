@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
+
 
 
 class AlbumController extends Controller
@@ -15,6 +17,19 @@ class AlbumController extends Controller
         FROM albums a
     ");
             return view("albums", ["albums" => $albums]);
+        }
+
+        function myalbums(){
+            $userId = Auth::id();
+
+            $myalbums = DB::select("
+            SELECT a.id, a.titre, a.creation, 
+                   (SELECT url FROM photos WHERE album_id = a.id LIMIT 1) AS image_url
+            FROM albums a
+            WHERE a.user_id = ?
+        ", [$userId]);
+    
+        return view("myalbums", ["albums" => $myalbums]);
         }
 
     function album($id){
@@ -37,5 +52,7 @@ class AlbumController extends Controller
     return redirect()->route('albums');  
     }
     
+  
+
     
 }

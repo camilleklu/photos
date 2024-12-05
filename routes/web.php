@@ -27,6 +27,8 @@ Route::get("/accueil", [OriginalController::class, 'accueil']);
 Route::get("/accueil/albums", [AlbumController::class, 'albums'])->name('albums');
 Route::get("/accueil/albums/{id}", [AlbumController::class, 'album'])->name('albums.photos');
 Route::post("/accueil/albums/edit", [AlbumController::class, 'AlbumEdit']);
+Route::get("/accueil/myalbums", [AlbumController::class, 'myalbums'])->name('myalbums');
+
 
 
 Route::get("/tags/{tag}", [PhotoController::class, 'tag']);

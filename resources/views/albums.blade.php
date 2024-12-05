@@ -16,6 +16,8 @@
 @endforeach
 </div>
 
+    <h1>Ajouter un album</h1>
+
     <form action="/accueil/albums/edit" method="POST">
     @csrf
     <input type="text" name="titre" placeholder="Titre de l'album" required>

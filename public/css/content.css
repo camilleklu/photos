@@ -26,6 +26,8 @@ h2{
     font-family: CloudScript;
 }
 
+/* Disposition photos dans les albums */
+
 .tab_pt{
     display: flex;
     flex-wrap: wrap;
@@ -35,6 +37,8 @@ h2{
     margin-left: auto;
     margin-right: auto;
 }
+
+/* -- */
 
 .photos img{
     width: 150px;
@@ -57,10 +61,14 @@ h2{
 /*Page avec tous les albums*/
 
 .album_tab{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
+
 }
 
 .album{
@@ -71,6 +79,7 @@ h2{
 
 #album{
     text-decoration: none;
+    color:#4d2d33;
 }
 
 .album img{

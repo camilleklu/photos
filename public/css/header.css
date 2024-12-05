@@ -45,26 +45,21 @@ header{
   color: aliceblue;
 }
 
-.sidenav a {
+.sidenav a , .desktop-nav a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 20px;
   display: block;
   transition: 0.3s;
   font-family: CloudScript;
+  color: #fff;
 }
 
-.sidenav a:nth-child(2){
+.sidenav a:nth-child(2), .desktop-nav a:nth-child(1) {
   font-family: Huova;
   font-size: 28px;
 }
 
-.sidenav a, 
-.desktop-nav a {
-  color: white;
-  text-decoration: none;
-  font-size: 20px;
-}
 
 .sidenav .closebtn {
   position: absolute;

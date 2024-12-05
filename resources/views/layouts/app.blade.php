@@ -20,7 +20,7 @@
                 <a href="/accueil">Accueil</a>
                 <a href="/accueil/albums">Albums</a>
                 @auth
-                <a href="">Mes Albums</a>
+                <a href="/accueil/myalbums">Mes Albums</a>
                 <a href="{{route("logout")}}" onclick="document.getElementById('logout').submit(); return false;">Logout</a>
                 <form id="logout" action="{{route("logout")}}" method="post">
                 @csrf
@@ -39,7 +39,7 @@
                 <a href="/accueil">Accueil</a>
                 <a href="/accueil/albums">Albums</a>
                 @auth
-                <a href="">Mes Albums</a>
+                <a href="/accueil/myalbums">Mes Albums</a>
                 <a href="{{route("logout")}}" onclick="document.getElementById('logout').submit(); return false;">Logout</a>
                 <form id="logout" action="{{route("logout")}}" method="post">
                 @csrf
