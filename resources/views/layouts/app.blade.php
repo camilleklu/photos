@@ -30,7 +30,12 @@
                 <a href="{{route("register")}}">S'inscrire</a>
                 @endauth     
 
-                <span><input placeholder="Rechercher" type="search" name="search" class="input"><i class='bx bx-search'></i><span>
+                <!-- <span><input placeholder="Rechercher" type="search" name="search" class="input"><i class='bx bx-search'></i><span> -->
+
+                <form action="{{ route('recherche') }}" method="GET">
+                <input type="text" name="q" placeholder="Rechercher" value="{{ request('q') }}">
+                <button type="submit"><i class='bx bx-search'></i></button>
+                </form>
 </div>
 
 
@@ -49,7 +54,12 @@
                 <a href="{{route("register")}}">S'inscrire</a>
 
                 @endauth     
-                <input placeholder="Rechercher" type="search" name="search" class="input"><i class='bx bx-search'></i>
+                <!-- <input placeholder="Rechercher" type="search" name="search" class="input"><i class='bx bx-search'></i> -->
+
+                <form action="{{ route('recherche') }}" method="GET">
+                <input type="text" name="q" placeholder="Rechercher" value="{{ request('q') }}">
+                <button type="submit"><i class='bx bx-search'></i></button>
+                </form>
 </div>
 
 <span onclick="openNav()"><i class='bx bx-menu'></i></span>

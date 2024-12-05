@@ -23,4 +23,24 @@ class PhotoController extends Controller
         return redirect()->route('albums.photos', ['id' => $id]);
     }
 
+
+    public function recherche(Request $request)
+{
+    $query = $request->input('q');
+
+    $photos = DB::select("
+        SELECT DISTINCT photos.*
+        FROM photos
+        LEFT JOIN albums ON albums.id = photos.album_id
+        LEFT JOIN possede_tag ON possede_tag.photo_id = photos.id
+        LEFT JOIN tags ON tags.id = possede_tag.tag_id
+        WHERE photos.titre LIKE ?
+           OR albums.titre LIKE ?
+           OR tags.nom LIKE ?
+    ", ['%' . $query . '%', '%' . $query . '%', '%' . $query . '%']);
+
+    return view('recherche', compact('photos', 'query'));
+}
+
+
 }

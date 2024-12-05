@@ -32,5 +32,5 @@ Route::get("/accueil/myalbums", [AlbumController::class, 'myalbums'])->name('mya
 
 
 Route::get("/tags/{tag}", [PhotoController::class, 'tag']);
-Route::get("/recherche", [PhotoController::class, 'recherche']);
+Route::get('/recherche', [PhotoController::class, 'recherche'])->name('recherche');
 Route::post('/accueil/albums/{id}/photo', [PhotoController::class, 'PhotoEdit'])->name('photo.edit');
