@@ -1,0 +1,86 @@
+@font-face {
+    font-family: "Huova";
+    src: url("../font/HuovaDemo-Light.otf");
+  }
+  
+  @font-face {
+    font-family: "CloudScript";
+    src: url("../font/CloudScript-Regular 400.otf");
+  }
+  
+  /***** Style global *****/
+section {
+    width: 100%;
+    min-height: 50vh;
+}
+
+h1{
+    font-family: Huova;
+    font-size: 36px;
+    color: #d77a5b;
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+    font-family: CloudScript;
+}
+
+.tab_pt{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.photos img{
+    width: 150px;
+    height: 150px;
+    border-radius: 25px;
+    object-fit: cover;
+}
+
+.photos img:hover{
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.photos p{
+    text-align: center;
+    font-family: CloudScript;
+}
+
+
+/*Page avec tous les albums*/
+
+.album_tab{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.album{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#album{
+    text-decoration: none;
+}
+
+.album img{
+    width: 150px;
+    height: 150px;
+    border-radius: 25px;
+    object-fit: cover;
+
+}
+.album p{
+    font-family: CloudScript;
+    font-size: 18px;
+}

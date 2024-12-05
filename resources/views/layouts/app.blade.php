@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Album</title>
     <link rel="stylesheet" href="{{ asset('css/header.css') }}">
+    <link href="{{ asset('css/content.css') }}" rel='stylesheet' />
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
@@ -19,7 +20,7 @@
                 <a href="/accueil">Accueil</a>
                 <a href="/accueil/albums">Albums</a>
                 @auth
-                Bonjour {{Auth::user()->name}}
+                <a href="">Mes Albums</a>
                 <a href="{{route("logout")}}" onclick="document.getElementById('logout').submit(); return false;">Logout</a>
                 <form id="logout" action="{{route("logout")}}" method="post">
                 @csrf
@@ -38,7 +39,7 @@
                 <a href="/accueil">Accueil</a>
                 <a href="/accueil/albums">Albums</a>
                 @auth
-                Bonjour {{Auth::user()->name}}
+                <a href="">Mes Albums</a>
                 <a href="{{route("logout")}}" onclick="document.getElementById('logout').submit(); return false;">Logout</a>
                 <form id="logout" action="{{route("logout")}}" method="post">
                 @csrf

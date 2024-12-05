@@ -25,10 +25,10 @@ Route::get('/', function () {
 Route::get("/accueil", [OriginalController::class, 'accueil']);
 
 Route::get("/accueil/albums", [AlbumController::class, 'albums'])->name('albums');
-Route::get("/accueil/albums/{id}", [AlbumController::class, 'album']);
+Route::get("/accueil/albums/{id}", [AlbumController::class, 'album'])->name('albums.photos');
 Route::post("/accueil/albums/edit", [AlbumController::class, 'AlbumEdit']);
 
 
 Route::get("/tags/{tag}", [PhotoController::class, 'tag']);
 Route::get("/recherche", [PhotoController::class, 'recherche']);
-Route::post("/photo/edit", [PhotoController::class, 'PhotoEdit']);
+Route::post('/accueil/albums/{id}/photo', [PhotoController::class, 'PhotoEdit'])->name('photo.edit');
