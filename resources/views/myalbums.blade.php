@@ -9,11 +9,8 @@
             @foreach($albums as $album)
             <div class="album">
                         <a href="{{ route('albums.photos', $album->id) }}" id="album">
-                        @if($album->image_url)
-                            <img src="{{ $album->image_url }}" class="card-img-top" alt="Album {{ $album->titre }}">
-                        @else
-                            <img src="/images/default-album.png" class="card-img-top" alt="Album par défaut">
-                        @endif
+                        <img src="{{ $album->image_url ?: asset('/images/white-background.avif') }}" alt="Image de présentation"> 
+                  
                             <p class="card-title">{{ $album->titre }}</p></a>
             </div>
             @endforeach

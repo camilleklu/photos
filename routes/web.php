@@ -28,9 +28,8 @@ Route::get("/accueil/albums", [AlbumController::class, 'albums'])->name('albums'
 Route::get("/accueil/albums/{id}", [AlbumController::class, 'album'])->name('albums.photos');
 Route::post("/accueil/albums/edit", [AlbumController::class, 'AlbumEdit']);
 Route::get("/accueil/myalbums", [AlbumController::class, 'myalbums'])->name('myalbums');
+Route::get('/tags/{tag}', [AlbumController::class, 'tag'])->name('tags');
 
 
-
-Route::get("/tags/{tag}", [PhotoController::class, 'tag']);
 Route::get('/recherche', [PhotoController::class, 'recherche'])->name('recherche');
 Route::post('/accueil/albums/{id}/photo', [PhotoController::class, 'PhotoEdit'])->name('photo.edit');

@@ -17,7 +17,7 @@ section {
 h1{
     font-family: Huova;
     font-size: 36px;
-    color: #d77a5b;
+    color: #966d75;
     text-align: center;
 }
 
@@ -32,7 +32,7 @@ h2{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 90%;
     margin-left: auto;
     margin-right: auto;
@@ -40,21 +40,19 @@ h2{
 
 /* -- */
 
-.photos img{
-    width: 150px;
-    height: 150px;
-    border-radius: 25px;
-    object-fit: cover;
+.photos{
+    margin-bottom: 2rem;
 }
 
 .photos img:hover{
     transform: scale(1.1);
     transition: transform 0.3s ease;
-}
+} 
 
 .photos p{
-    text-align: center;
+    text-align: start;
     font-family: CloudScript;
+    text-transform: capitalize;
 }
 
 
@@ -92,4 +90,68 @@ h2{
 .album p{
     font-family: CloudScript;
     font-size: 18px;
+}
+
+
+
+
+/*Agrandissement d'image*/
+
+
+
+.thumbnail {
+    width: 150px;
+    height: 150px;
+    border-radius: 40px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    padding-top: 60px;
+}
+
+.modal-content {
+    display: block;
+    margin: auto;
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/*--*/
+
+/*Tags*/
+
+.tags span {
+font-size: 14px;
 }

@@ -12,6 +12,9 @@ class PhotoController extends Controller
         $titre = $request->input('titre');
         $url = $request->input('url');
         $note = $request->input('note');
+
+        $tags = $request->input('tags');
+
     
         DB::insert("INSERT INTO photos (titre, url, note, album_id) VALUES (?, ?, ?, ?)", [
             $titre, 
@@ -19,9 +22,29 @@ class PhotoController extends Controller
             $note,
             $id         
         ]);
+
+// Ajout de tags
+
+    $photoId = DB::getPdo()->lastInsertId();
+    if (!empty($tags)) {
+        $tagsArray = array_map('trim', explode(',', $tags));
+
+        foreach ($tagsArray as $tagName) {
+            $tag = DB::select("SELECT id FROM tags WHERE nom = ?", [$tagName]);
+            
+            if (empty($tag)) {
+                DB::insert("INSERT INTO tags (nom) VALUES (?)", [$tagName]);
+                $tagId = DB::getPdo()->lastInsertId();
+            } else {
+                $tagId = $tag[0]->id;
+            }
+
+            DB::insert("INSERT INTO possede_tag (photo_id, tag_id) VALUES (?, ?)", [$photoId, $tagId]);
+        }
+    }   
     
         return redirect()->route('albums.photos', ['id' => $id]);
-    }
+     }
 
 
     public function recherche(Request $request)
@@ -41,6 +64,11 @@ class PhotoController extends Controller
 
     return view('recherche', compact('photos', 'query'));
 }
+
+
+
+
+
 
 
 }

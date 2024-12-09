@@ -42,8 +42,11 @@ header{
   padding-top: 60px; 
   transition: 0.5s; 
   background-color: #4d2d33;
-  color: aliceblue;
+  color: #fff;
 }
+
+
+/**Commun Side et desktop**/
 
 .sidenav a , .desktop-nav a {
   padding: 8px 8px 8px 32px;
@@ -99,7 +102,7 @@ footer{
 @media (min-width: 870px) {
   header {
     box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
-    color: aliceblue;
+    color: #fff;
   }
 
   .sidenav {

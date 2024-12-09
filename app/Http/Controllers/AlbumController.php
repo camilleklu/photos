@@ -35,6 +35,18 @@ class AlbumController extends Controller
     function album($id){
             $photos = DB::select("SELECT * FROM photos WHERE album_id = ?", [$id]);
             $album = DB::select("SELECT * FROM albums WHERE id = ?", [$id]);
+            
+            foreach ($photos as $photo) {
+                $tags = DB::select('
+                    SELECT tags.nom 
+                    FROM tags
+                    JOIN possede_tag ON tags.id = possede_tag.tag_id
+                    WHERE possede_tag.photo_id = ?
+                ', [$photo->id]);
+        
+                $photo->tags = $tags; 
+            }
+
             return view("album", [
                 "photos" => $photos,
                 "album" => $album

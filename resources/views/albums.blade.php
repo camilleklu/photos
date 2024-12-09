@@ -7,7 +7,8 @@
     @foreach ($albums as $a)
     <a href="{{ url('accueil/albums/' . $a->id) }}" id="album">
     <div class="album">
-    <img src="{{ $a->image_url }}" alt="Image de présentation"> 
+    <img src="{{ $a->image_url ?: asset('/images/white-background.avif') }}" alt="Image de présentation"> 
+
         <p>{{ $a->titre }}</p>
        
     </div>
