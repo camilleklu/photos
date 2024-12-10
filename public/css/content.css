@@ -42,6 +42,21 @@ h2{
 
 .photos{
     margin-bottom: 2rem;
+    position: relative;
+}
+.photos form{
+    position: absolute;
+    left: 130px;
+    bottom: 200px;
+}
+.photos form button{
+    border: none;
+    margin: 5px;
+    padding: 5px;
+    background-color: #4d2d33;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
 }
 
 .photos img:hover{
@@ -68,11 +83,27 @@ h2{
     flex-wrap: wrap;
 
 }
-
 .album{
     display: flex;
     flex-direction: column;
     text-align: center;
+    position: relative;
+
+}
+
+.album form{
+    position: absolute;
+    left: 130px;
+    bottom: 180px;
+}
+.album form button{
+    border: none;
+    margin: 5px;
+    padding: 5px;
+    background-color: #4d2d33;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
 }
 
 #album{
@@ -155,3 +186,5 @@ h2{
 .tags span {
 font-size: 14px;
 }
+
+

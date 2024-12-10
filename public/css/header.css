@@ -130,24 +130,28 @@ footer{
 /***** Button Recherche *****/
 
 header form {
-  width: 80%;
   display: flex;
   flex-direction: row-reverse;
   justify-content: start;
-  margin-top: 0.5rem;
-  margin-left: 1.5rem;
-  padding-top: 0.3rem;
-  padding-bottom: 0.3rem;
-  background-color: #fff;
-  border-radius: 5px;
  
 }
 .group input{
   border: none;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  background-color: #fff;
+  border-radius: 5px;
+  font-family: CloudScript;
 }
 
 .group button {
   border: none;
-  background-color: white;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  background-color: #fff;
+  border-radius: 50%;
+  margin-right: 5px;
+  margin-left: 1rem;
+
 }
 

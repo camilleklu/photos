@@ -19,12 +19,15 @@
             <div id="caption"></div>
             </div>
 
+            
+           
                 <p>{{ $photo->titre }}</p>
 
                 <div class="tags">
                     @foreach ($photo->tags as $tag)
                         <span>#{{ $tag->nom }}</span>
                     @endforeach
+                </div>
 
                 <form action="{{ route('photo.delete', ['id' => $photo->id]) }}" method="POST">
                 @csrf
@@ -32,8 +35,9 @@
                 <button type="submit" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cette photo ?')">✕</button>
             </form>
 
-                </div>
             </div>
+
+         
 
         @endforeach
     </div>
@@ -43,10 +47,11 @@
 
 
     <h2>Ajouter une photo à cet album</h2>
-    <form class="add-album" action="{{ route('photo.edit', ['id' => request()->route('id')]) }}" method="POST">
+    <form action="{{ route('photo.edit', ['id' => request()->route('id')]) }}" method="POST" enctype="multipart/form-data">
         @csrf
         <input type="text" name="titre" placeholder="Titre de la photo" required>
-        <input type="text" name="url" placeholder="URL" required>
+        <!-- <input type="text" name="url" placeholder="URL" required> -->
+        <input type="file" name="url" placeholder="Insérer un fichier" required/>
         <input type="text" name="note" placeholder="Note">
         <input type="text" name="tags" placeholder="Tags (séparés par des virgules)">
         <button type="submit">Ajouter la photo</button>
