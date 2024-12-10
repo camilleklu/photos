@@ -47,7 +47,7 @@
 
 
     <h2>Ajouter une photo à cet album</h2>
-    <form action="{{ route('photo.edit', ['id' => request()->route('id')]) }}" method="POST" enctype="multipart/form-data">
+    <form class="add-album" action="{{ route('photo.edit', ['id' => request()->route('id')]) }}" method="POST" enctype="multipart/form-data">
         @csrf
         <input type="text" name="titre" placeholder="Titre de la photo" required>
         <!-- <input type="text" name="url" placeholder="URL" required> -->

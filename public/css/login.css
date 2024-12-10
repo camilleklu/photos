@@ -30,10 +30,6 @@
   font-family: "CloudScript", Arial, sans-serif;
 }
 
-.login-register input[type="checkbox"] {
-
-}
-
 .login-register input[type="submit"] {
   padding: 10px 20px;
   background-color: #966d75;
@@ -52,3 +48,12 @@
   transform: scale(1.05);
 }
 
+.checkbox-container {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    cursor: pointer;
+
+ 
+   
+}
