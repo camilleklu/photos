@@ -12,12 +12,17 @@ class PhotoController extends Controller
 // Ajout de photos dans l'album
     function PhotoEdit(Request $request, $id){
         $titre = $request->input('titre');
-        $url = $request->input('url');
+        // $url = $request->file('url');
         $note = $request->input('note');
-
         $tags = $request->input('tags');
 
+        $file = $request->file('url');
+        $fileName = time() . '_' . $file->getClientOriginalName(); 
+        $filePath = $file->storeAs('photos', $fileName, 'public'); 
+        $url = Storage::url($filePath); 
+
     
+        
         DB::insert("INSERT INTO photos (titre, url, note, album_id) VALUES (?, ?, ?, ?)", [
             $titre, 
             $url, 
