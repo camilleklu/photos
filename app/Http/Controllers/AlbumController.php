@@ -10,6 +10,8 @@ use Illuminate\Support\Facades\Auth;
 
 class AlbumController extends Controller
 {
+
+// afficher les albums + image pour illustrer
     function albums(){
         $albums = DB::select("
         SELECT a.id, a.titre, a.creation, 
@@ -19,6 +21,7 @@ class AlbumController extends Controller
             return view("albums", ["albums" => $albums]);
         }
 
+// Affichage de mes albums quand connecter
         function myalbums(){
             $userId = Auth::id();
 
@@ -31,6 +34,8 @@ class AlbumController extends Controller
     
         return view("myalbums", ["albums" => $myalbums]);
         }
+
+// affichage des photos de l'album        
 
     function album($id){
             $photos = DB::select("SELECT * FROM photos WHERE album_id = ?", [$id]);
@@ -53,18 +58,40 @@ class AlbumController extends Controller
             ]);
         }
 
+
+// Ajout album
+
     function AlbumEdit(Request $request){
         $titre = $request->input('titre');
+        $userId = Auth::id();
 
         DB::insert("INSERT INTO albums (titre, creation, user_id) VALUES (?, ?, ?)", [
             $titre, 
             now(),     
-            1          
+            $userId        
         ]);
     return redirect()->route('albums');  
     }
+
+
+    // Delete album
     
-  
+    public function deleteAlbum($id)
+    {
+
+    $photos = DB::select("SELECT id FROM photos WHERE album_id = ?", [$id]);
+
+    foreach ($photos as $photo) {
+        DB::delete("DELETE FROM possede_tag WHERE photo_id = ?", [$photo->id]);
+    }
+
+    DB::delete("DELETE FROM photos WHERE album_id = ?", [$id]);
+    DB::delete("DELETE FROM albums WHERE id = ?", [$id]);
+
+    return redirect()->route('albums')->with('success', 'Album supprimé avec succès.');
+    }
+    
+    
 
     
 }

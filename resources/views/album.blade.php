@@ -25,6 +25,13 @@
                     @foreach ($photo->tags as $tag)
                         <span>#{{ $tag->nom }}</span>
                     @endforeach
+
+                <form action="{{ route('photo.delete', ['id' => $photo->id]) }}" method="POST">
+                @csrf
+                @method('DELETE')
+                <button type="submit" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cette photo ?')">✕</button>
+            </form>
+
                 </div>
             </div>
 

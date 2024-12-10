@@ -12,10 +12,18 @@
         <p>{{ $a->titre }}</p>
        
     </div>
+    <form action="{{ route('album.delete', ['id' => $a->id]) }}" method="POST" style="display:inline;">
+    @csrf
+    @method('DELETE')
+    <button type="submit" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cet album et toutes ses photos ?')">✕</button>
+    </form>
     </a>
 
-@endforeach
-</div>
+  
+
+    @endforeach
+    </div>
+
 
     <h1>Ajouter un album</h1>
 
@@ -23,8 +31,8 @@
     @csrf
     <input type="text" name="titre" placeholder="Titre de l'album" required>
     <button type="submit">Ajouter un album</button>
-</form>
-
+    </form>
+ 
 
 @endsection
 

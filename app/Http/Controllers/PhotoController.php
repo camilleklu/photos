@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\DB;
 
 class PhotoController extends Controller
 {
+
+// Ajout de photos dans l'album
     function PhotoEdit(Request $request, $id){
         $titre = $request->input('titre');
         $url = $request->input('url');
@@ -47,6 +49,8 @@ class PhotoController extends Controller
      }
 
 
+// Recherche selon les titres des photos, des albums et des tags
+
     public function recherche(Request $request)
 {
     $query = $request->input('q');
@@ -67,7 +71,15 @@ class PhotoController extends Controller
 
 
 
+// Delete les photos
 
+public function deletePhoto($id)
+{
+    DB::delete("DELETE FROM possede_tag WHERE photo_id = ?", [$id]);
+    DB::delete("DELETE FROM photos WHERE id = ?", [$id]);
+
+    return redirect()->back()->with('success', 'Photo supprimée avec succès.');
+}
 
 
 
