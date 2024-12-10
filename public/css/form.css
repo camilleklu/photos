@@ -1,0 +1,46 @@
+@font-face {
+    font-family: "Huova";
+    src: url("../font/HuovaDemo-Light.otf");
+}
+  
+@font-face {
+    font-family: "CloudScript";
+    src: url("../font/CloudScript-Regular 400.otf");
+}
+
+/***** Style global *****/
+
+.add-album {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.add-album input[type="text"] {
+    font-family: CloudScript;
+    width: 300px;
+    height: 40px;
+    border: 2px solid var(--main-color, #966d75);
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 16px;
+}
+
+.add-album button {
+    font-family: CloudScript;
+    padding: 10px 20px;
+    background-color: #966d75;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-album button:hover {
+    background-color: #4d2d33;
+}
