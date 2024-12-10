@@ -46,18 +46,17 @@ h2{
 }
 .photos form{
     position: absolute;
-    left: 130px;
+    left: 125px;
     bottom: 200px;
 }
 .photos form button{
     border: none;
     margin: 5px;
-    padding: 5px;
+    padding: 10px;
     background-color: #4d2d33;
     color: white;
     font-weight: bold;
-    border-radius: 5px;
-}
+    clip-path: circle(40% at 50% 50%);}
 
 .photos img:hover{
     transform: scale(1.1);
@@ -93,17 +92,17 @@ h2{
 
 .album form{
     position: absolute;
-    left: 130px;
-    bottom: 180px;
+    left: 120px;
+    bottom: 170px;
 }
 .album form button{
     border: none;
-    margin: 5px;
-    padding: 5px;
+    margin: 10px;
+    padding: 10px;
     background-color: #4d2d33;
     color: white;
     font-weight: bold;
-    border-radius: 5px;
+    clip-path: circle(40% at 50% 50%);
 }
 
 #album{

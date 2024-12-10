@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 
 
 class PhotoController extends Controller
@@ -12,7 +13,6 @@ class PhotoController extends Controller
 // Ajout de photos dans l'album
     function PhotoEdit(Request $request, $id){
         $titre = $request->input('titre');
-        // $url = $request->file('url');
         $note = $request->input('note');
         $tags = $request->input('tags');
 
