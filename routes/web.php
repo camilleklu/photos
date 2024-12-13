@@ -34,3 +34,4 @@ Route::delete('/accueil/albums/{id}', [AlbumController::class, 'deleteAlbum'])->
 Route::get('/recherche', [PhotoController::class, 'recherche'])->name('recherche');
 Route::post('/accueil/albums/{id}/photo', [PhotoController::class, 'PhotoEdit'])->name('photo.edit');
 Route::delete('/accueil/albums/photo/{id}', [PhotoController::class, 'deletePhoto'])->name('photo.delete');
+

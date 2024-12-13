@@ -5,7 +5,6 @@
         <h1>{{ $t->titre }}</h1>
     @endforeach
 
-
     
    
      <div class="tab_pt">
@@ -46,11 +45,10 @@
 
 
 
-    <h2>Ajouter une photo à cet album</h2>
+    <h1>Ajouter une photo à cet album</h1>
     <form class="add-album" action="{{ route('photo.edit', ['id' => request()->route('id')]) }}" method="POST" enctype="multipart/form-data">
         @csrf
         <input type="text" name="titre" placeholder="Titre de la photo" required>
-        <!-- <input type="text" name="url" placeholder="URL" required> -->
         <input type="file" name="url" placeholder="Insérer un fichier" required/>
         <input type="text" name="note" placeholder="Note">
         <input type="text" name="tags" placeholder="Tags (séparés par des virgules)">

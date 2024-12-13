@@ -19,6 +19,8 @@ h1{
     font-size: 36px;
     color: #966d75;
     text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
 }
 
 h2{
@@ -43,11 +45,13 @@ h2{
 .photos{
     margin-bottom: 2rem;
     position: relative;
+    min-height: 200px; 
+    /* width: 20%; */
 }
 .photos form{
     position: absolute;
-    left: 125px;
-    bottom: 200px;
+    left: 120px;
+    bottom: 165px;
 }
 .photos form button{
     border: none;
@@ -56,12 +60,9 @@ h2{
     background-color: #4d2d33;
     color: white;
     font-weight: bold;
-    clip-path: circle(40% at 50% 50%);}
-
-.photos img:hover{
-    transform: scale(1.1);
-    transition: transform 0.3s ease;
-} 
+    clip-path: circle(40% at 50% 50%);
+    cursor: pointer;
+}
 
 .photos p{
     text-align: start;
@@ -93,7 +94,7 @@ h2{
 .album form{
     position: absolute;
     left: 120px;
-    bottom: 170px;
+    bottom: 140px;
 }
 .album form button{
     border: none;
@@ -103,6 +104,7 @@ h2{
     color: white;
     font-weight: bold;
     clip-path: circle(40% at 50% 50%);
+    cursor: pointer;
 }
 
 #album{
@@ -132,10 +134,11 @@ h2{
 .thumbnail {
     width: 150px;
     height: 150px;
-    border-radius: 40px;
+    border-radius: 25px;
     object-fit: cover;
     cursor: pointer;
     transition: transform 0.2s;
+    margin-bottom: 10px;
 }
 
 .modal {
@@ -184,6 +187,7 @@ h2{
 
 .tags span {
 font-size: 14px;
+width: 100%;
 }
 
 

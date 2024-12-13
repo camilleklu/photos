@@ -88,4 +88,10 @@ public function deletePhoto($id)
 
 
 
+// Function pour trier les photos
+
+
+
+
+
 }

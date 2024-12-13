@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="{{ asset('css/form.css') }}">
     <link rel="stylesheet" href="{{ asset('css/login.css') }}">
     <link href="{{ asset('css/content.css') }}" rel='stylesheet' />
+    <link rel="stylesheet" href="{{ asset('css/accueil.css') }}">
+
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
