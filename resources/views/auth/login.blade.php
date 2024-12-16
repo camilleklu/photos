@@ -13,7 +13,7 @@
     <label for="remember">Remember Me</label>
   </div>
   <br />
-  <input type="submit" /><br />
+  <button type="submit">Envoyez</button><br />
 </form>
 
 

@@ -1,0 +1,17 @@
+@font-face {
+    font-family: "Huova";
+    src: url("../font/HuovaDemo-Light.otf");
+}
+  
+@font-face {
+    font-family: "CloudScript";
+    src: url("../font/CloudScript-Regular 400.otf");
+}
+
+/*** Style global ***/
+
+footer {
+    font-family: "CloudScript";
+    color: #4d2d33;
+    font-weight: bold;
+}
