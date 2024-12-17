@@ -49,7 +49,7 @@
     <form class="add-album" action="{{ route('photo.edit', ['id' => request()->route('id')]) }}" method="POST" enctype="multipart/form-data">
         @csrf
         <input type="text" name="titre" placeholder="Titre de la photo" required>
-        <label for="file">Choisir une image</label>
+        <label class="upload-file" for="file"><i class='bx bx-upload'></i>Choisir une image</label>
         <input id="file" name="url" type="file" style="display:none;">        
         <input type="text" name="note" placeholder="Note">
         <input type="text" name="tags" placeholder="Tags (séparés par des virgules)">

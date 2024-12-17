@@ -28,6 +28,10 @@
     font-size: 16px;
 }
 
+input:focus {
+    outline: none;
+}
+
 .add-album button {
     font-family: CloudScript;
     padding: 10px 20px;
@@ -53,4 +57,40 @@
     border-radius: 5px;
     font-size: 16px;
     background-color: #fff;
+}
+.span {
+    margin-top: 20px;
+    text-decoration: none;
+    color: #4d2d33;
+  }
+  
+.span a {
+    color: #4d2d33;
+}
+
+.span a:hover {
+    color:#966d75;
+}
+
+.add-album label.upload-file {
+    font-family: CloudScript;
+    padding: 10px 20px;
+    background-color: #966d75;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+    display: inline-block;
+}
+
+.add-album label.upload-file i {
+    margin-right: 15px;
+}
+
+.add-album label.upload-file:hover {
+    background-color: #4d2d33;
 }

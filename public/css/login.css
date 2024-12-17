@@ -49,12 +49,6 @@
   transform: scale(1.05);
 }
 
-.checkbox-container {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-}
-
-.login-register input[type=""] {
-  
+.login-register button:hover {
+  background-color: #4d2d33;
 }
