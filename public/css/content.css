@@ -107,6 +107,10 @@ h2{
     cursor: pointer;
 }
 
+.titre-albums {
+    margin-top: 10px;
+}
+
 #album{
     text-decoration: none;
     color:#4d2d33;
@@ -188,6 +192,6 @@ h2{
 .tags span {
 font-size: 14px;
 width: 100%;
+font-family: 'CloudScript';
+color: #966d75;
 }
-
-

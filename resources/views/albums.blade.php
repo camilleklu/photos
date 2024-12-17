@@ -9,7 +9,7 @@
     <div class="album">
     <img src="{{ $a->image_url ?: asset('/images/white-background.avif') }}" alt="Image de présentation"> 
 
-        <p>{{ $a->titre }}</p>
+        <p class="titre-albums">{{ $a->titre }}</p>
        
         <form action="{{ route('album.delete', ['id' => $a->id]) }}" method="POST" style="display:inline;">
     @csrf

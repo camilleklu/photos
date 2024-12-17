@@ -58,6 +58,8 @@ input:focus {
     font-size: 16px;
     background-color: #fff;
 }
+
+/***** Upload-file *****/
 .span {
     margin-top: 20px;
     text-decoration: none;
@@ -89,6 +91,7 @@ input:focus {
 
 .add-album label.upload-file i {
     margin-right: 15px;
+    font-size: 17px;
 }
 
 .add-album label.upload-file:hover {
