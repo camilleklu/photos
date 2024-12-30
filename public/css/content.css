@@ -16,6 +16,9 @@ section {
 
 h1{
     font-family: Huova;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
     font-size: 36px;
     color: #966d75;
     text-align: center;
@@ -43,15 +46,17 @@ h2{
 /* -- */
 
 .photos{
+    border: red solid 2px;
     margin-bottom: 2rem;
     position: relative;
     min-height: 200px; 
+    /* width: 60%; */
     /* width: 20%; */
 }
 .photos form{
     position: absolute;
     left: 120px;
-    bottom: 165px;
+    bottom: 170px;
 }
 .photos form button{
     border: none;
