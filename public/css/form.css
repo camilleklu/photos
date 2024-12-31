@@ -10,8 +10,13 @@
 
 /***** Style global *****/
 
+form.add-album{
+    margin-bottom: 2rem;
+}
+
+
+
 .add-album {
-    margin-top: 20px;
     display: flex;
     flex-direction: column;
     gap: 10px;

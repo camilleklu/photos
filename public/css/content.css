@@ -37,26 +37,29 @@ h2{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-around;
-    width: 90%;
+    justify-content: space-between;
+}
+
+
+.photos {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    position: relative;
+    width: 170px;
     margin-left: auto;
     margin-right: auto;
+    min-height: 250px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
-/* -- */
 
-.photos{
-    border: red solid 2px;
-    margin-bottom: 2rem;
-    position: relative;
-    min-height: 200px; 
-    /* width: 60%; */
-    /* width: 20%; */
-}
 .photos form{
     position: absolute;
-    left: 120px;
-    bottom: 170px;
+    left: 140px;
+    bottom: 220px;
 }
 .photos form button{
     border: none;
@@ -69,12 +72,26 @@ h2{
     cursor: pointer;
 }
 
+
 .photos p{
     text-align: start;
     font-family: CloudScript;
     text-transform: capitalize;
 }
 
+/*Tags*/
+
+.tags span {
+font-size: 12px;
+font-family: 'CloudScript';
+color: #966d75;
+}
+
+.photos p, .photos .tags {
+    margin: 0.5rem 0;
+    text-align: center;
+    flex-shrink: 0; /* Empêcher la compression */
+}
 
 /*Page avec tous les albums*/
 
@@ -99,7 +116,7 @@ h2{
 .album form{
     position: absolute;
     left: 120px;
-    bottom: 140px;
+    bottom: 155px;
 }
 .album form button{
     border: none;
@@ -114,6 +131,7 @@ h2{
 
 .titre-albums {
     margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 #album{
@@ -190,13 +208,70 @@ h2{
     cursor: pointer;
 }
 
-/*--*/
 
-/*Tags*/
 
-.tags span {
-font-size: 14px;
-width: 100%;
-font-family: 'CloudScript';
-color: #966d75;
+/* triage albums */
+
+.filter-album{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: start;
+    margin-bottom: 20px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
 }
+
+
+.filter-album input[type="text"]{
+    font-family: CloudScript;
+    border: 2px solid var(--main-color, #966d75);
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 5px;
+    width: 45%;
+}
+.filter-album select{
+    font-family: CloudScript;
+    border: 2px solid var(--main-color, #966d75);
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 5px;
+}
+
+.filter-album button{
+    font-family: CloudScript;
+    background-color: #966d75;
+    padding: 5px 10px;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 10px;
+}
+
+.filter-album button:hover {
+    background-color: #4d2d33;
+}
+
+
+.filter-album input[type="number"]{
+    font-family: CloudScript;
+    border: 2px solid var(--main-color, #966d75);
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 5px;
+    width: 40%;
+}
+
+@media screen and (min-width: 768px) {
+    .filter-album input[type="number"]{
+        width: 20%;
+    }
+    .filter-album input[type="text"]{
+        width: 20%;
+    }
+  }

@@ -33,7 +33,7 @@ class AlbumController extends Controller
         if (!empty($date) && in_array(strtolower($date), ['asc', 'desc'])) {
             $sql .= " ORDER BY a.creation " . strtoupper($date);
         } else {
-            $sql .= " ORDER BY a.creation DESC"; // Par défaut, les plus récents
+            $sql .= " ORDER BY a.creation DESC";
         }
 
         $albums = DB::select($sql, $params);

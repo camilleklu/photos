@@ -3,7 +3,7 @@
 
 <h1>Les Albums</h1>
 
-<form method="GET" action="{{ url()->current() }}" class="filter-form">
+<form method="GET" action="{{ url()->current() }}" class="filter-album">
     <input type="text" name="titre" placeholder="Rechercher par titre" value="{{ request('titre') }}">
     <select name="date">
         <option value="" disabled {{ request('date') == null ? 'selected' : '' }}>Trier par date</option>

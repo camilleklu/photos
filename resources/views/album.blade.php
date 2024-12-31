@@ -5,9 +5,9 @@
 <h1>{{ $t->titre }}</h1>
 @endforeach
 
-<form method="GET" action="{{ url()->current() }}">
+<form method="GET" action="{{ url()->current() }}" class="filter-album">
     <input type="text" name="titre" placeholder="Rechercher par titre" value="{{ request('titre') }}">
-    <input type="number" name="note" placeholder="Note minimale" value="{{ request('note') }}">
+    <input type="number" name="note" placeholder="Note minimale" value="{{ request('note') }}" min="0" max="10">
     <button type="submit">Filtrer</button>
 </form>
 
@@ -15,6 +15,13 @@
 <div class="tab_pt">
     @foreach ($photos as $photo)
     <div class="photos">
+        <form action="{{ route('photo.delete', ['id' => $photo->id]) }}" method="POST">
+            @csrf
+            @method('DELETE')
+            <button class="delete-button" type="submit" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cette photo ?')">✕</button>
+        </form>
+
+
         <img src="{{ $photo->url }}" alt="{{ $photo->titre }}" class="thumbnail" width="200">
 
         <div id="modal" class="modal">
@@ -33,11 +40,7 @@
             @endforeach
         </div>
 
-        <form action="{{ route('photo.delete', ['id' => $photo->id]) }}" method="POST">
-            @csrf
-            @method('DELETE')
-            <button type="submit" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cette photo ?')">✕</button>
-        </form>
+
 
     </div>
 
