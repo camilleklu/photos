@@ -6,10 +6,10 @@
 
 .accueil .banniere{
     width: 100%;
-    height:500px;
+    height:100vh;
     background-size: cover;
     background-position: center;
-    background-image: url(https://images.unsplash.com/photo-1670726113933-4bb3940deaf3?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-image: url(https://i.pinimg.com/736x/56/5f/e1/565fe165aa1ee1ad560054029a5b39f7.jpg);
     filter: blur(1px);
     -webkit-filter: blur(2px);
     position: absolute;
@@ -17,27 +17,51 @@
 
 .accueil .banner{
 position: relative;
-top: 100px;
-width: 80%;
+top: 250px;
+width: 90%;
 min-height: 250px;
 margin-left: auto;
 margin-right: auto;
 border-radius: 10px;
-backdrop-filter: blur(8px);
+border: #000 2px dashed;
+background-color: rgb(255 255 255 / 50%);
+padding: 2rem;
 
 
 }
 
 .banner h1{
-    color: #fff;
+    color: #000;
     text-align: start;
+    font-weight: 900;
 }
 
 .banner p {
-    color: #fff;
+    color: #000;
     text-align: start;
     font-size: 24px;
+    font-weight: 900;
     font-family: CloudScript;
+    margin-bottom: 1rem;
+}
+.banner a{
+    margin :0;
+    display: block;
+    text-align: center;
+    font-family: CloudScript;
+    background-color: #966d75;
+    padding: 5px 10px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.banner a:hover {
+    background-color: #4d2d33;
 }
 
 @media screen and (min-width: 768px) {
